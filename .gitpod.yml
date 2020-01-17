@@ -5,4 +5,8 @@ ports:
     onOpen: open-preview
 
 tasks:
-  - init: cp config.toml.example config.toml && ./x.py build && ./x.py install
+  - init: >
+      cp config.toml.example config.toml && 
+      ./x.py build && ./x.py install && 
+      ./x.py install cargo &&
+      build/bootstrap
